@@ -1,6 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import TestComponent from './components/TestComponent';
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
         <p>
           New react app
         </p>
+        <TestComponent></TestComponent>
       </header>
     </div>
   );
