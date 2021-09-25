@@ -11,7 +11,6 @@ function App() {
         <p>
           New react app
         </p>
-        <TestComponent></TestComponent>
       </header>
     </div>
   );
