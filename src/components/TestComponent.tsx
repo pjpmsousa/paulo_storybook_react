@@ -11,6 +11,7 @@ const TestComponent = ({title, description}: TestComponentPros) => {
         <div className={styles.teste}>
             <div className={styles.title}>{title}</div>
             <div>{description}</div>
+            <div>trying unit tests</div>
         </div>
     )
 }

@@ -11,10 +11,10 @@ export default {
       }
 } as ComponentMeta <typeof TestComponent>
 
-const Template: ComponentStory <typeof TestComponent> = (args) => <TestComponent {...args} />;
+const Template: ComponentStory <typeof TestComponent> = args => <TestComponent {...args} />;
 
-export const Normal = Template.bind({});
-Normal.args = {
+export const Standard = Template.bind({});
+Standard.args = {
     title: "Test Component",
     description: "React and Storybook testing"
 }
