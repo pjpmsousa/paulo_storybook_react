@@ -1,0 +1,25 @@
+.wrapper {
+    display: flex;
+    align-items: center;
+    background-color:darkslategray;
+    color: white;
+    font-family: sans-serif;
+    font-weight: 800;
+    padding: 15px;
+}
+
+.company {
+    display: flex;
+    align-items: center;
+    flex: 1;
+}
+
+.logo {
+    height: 25px;
+}
+
+.icon {
+    height: 25px;
+    width: 25px;
+}
+

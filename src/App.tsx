@@ -4,11 +4,13 @@ import './App.css';
 import TestComponent from './components/TestComponent';
 import Badge from './components/urbint/badge/Badge';
 import { LevelEnum } from './components/urbint/badge/Badge';
+import Navigation from './components/urbint/navigation/Navigation';
 
 function App() {
   return (
     <div className="App">
-      <Badge riskLevel={LevelEnum.unknown} isBadge></Badge>
+      <Navigation></Navigation>
+      <Badge riskLevel={LevelEnum.high} isBadge></Badge>
     </div>
   );
 }
