@@ -17,5 +17,6 @@ Standard.args = {
     type: "DESIGN",
     street: "122 Lexington Ave",
     town: "Staten Island, NY",
+    startDate: new Date("December 3, 2021"),
     task: "Planting Tree by Nyc Parks"
 }

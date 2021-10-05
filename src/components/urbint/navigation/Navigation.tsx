@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./Navigation.module.css";
 import urbint from "./urbint.svg";
-import icon from "../../../icon.svg";
+import bell from "./bell.svg";
 
 
 interface NavigationProps {
@@ -16,7 +16,7 @@ const Navigation = ({isIconVisible}: NavigationProps) => {
           <img src={urbint} className={styles.logo} alt="logo" />
           <div>DAMAGE PREVENTION</div>
         </div>
-        {isIconVisible && <img src={icon} className={styles.icon} alt="icon" />}
+        {isIconVisible && <img src={bell} className={styles.icon} alt="bell" />}
       </div>
     </>
   );
