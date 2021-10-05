@@ -1,0 +1,50 @@
+.container {
+    border: 1px solid lightgray;
+    padding: 10px;
+    font-family: sans-serif;
+    max-width: 350px;
+    font-weight: 600;
+    color:lightslategray
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+}
+
+.risk {
+    display: flex;
+}
+
+.separator {
+    color: lightgray;
+    padding: 0 5px;
+}
+
+.type {
+    font-size: 14px;
+    color: darkslategray;
+}
+
+.location {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 0;
+}
+
+.description {
+    font-size: 14px;
+    display: flex;
+    padding: 2px 0;
+}
+
+.street {
+    font-size: 16px;
+    font-weight: 800;
+    color: black;
+}
+
+.town {
+    font-size: 14px;
+}
