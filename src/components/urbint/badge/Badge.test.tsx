@@ -18,7 +18,7 @@ describe("Badge", () => {
     expect(labelVeryHigh).toBeInTheDocument();
   });
 
-  test("Check for correct background color in badge", () => {
+  test("Check for correct background-color in badge", () => {
     render(<Badge isBadge riskLevel={LevelEnum.medium} />);
 
     const badge = screen.getByText("MEDIUM");

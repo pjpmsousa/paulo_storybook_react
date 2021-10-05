@@ -22,7 +22,7 @@ const Item = ({
   startDate,
   task,
 }: ItemProps) => {
-
+  
   const calculateDays = (startDay: any): number => {
     const oneDay = 24 * 60 * 60 * 1000; // hours*minutes*seconds*milliseconds
     const today: any = new Date();
@@ -44,7 +44,9 @@ const Item = ({
           <span className={styles.street}>{street}</span>
           <span className={styles.town}>{town}</span>
         </div>
-        <div className={styles.description}>{`Starts in ${calculateDays(startDate)} days`}</div>
+        <div className={styles.description}>{`Starts in ${calculateDays(
+          startDate
+        )} days`}</div>
         <div className={styles.description}>{task}</div>
       </div>
     </>
