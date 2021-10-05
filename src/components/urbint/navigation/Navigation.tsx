@@ -1,7 +1,8 @@
 import React from "react";
 import styles from "./Navigation.module.css";
-import logo from "../../../logo.svg";
-import colors from "../../../stories/assets/colors.svg";
+import urbint from "./urbint.svg";
+import icon from "../../../icon.svg";
+
 
 interface NavigationProps {
     isIconVisible: boolean
@@ -12,10 +13,10 @@ const Navigation = ({isIconVisible}: NavigationProps) => {
     <>
       <div className={styles.wrapper}>
         <div className={styles.company}>
-          <img src={logo} className={styles.logo} alt="logo" />
+          <img src={urbint} className={styles.logo} alt="logo" />
           <div>DAMAGE PREVENTION</div>
         </div>
-        {isIconVisible && <img src={colors} className={styles.icon} alt="icon" />}
+        {isIconVisible && <img src={icon} className={styles.icon} alt="icon" />}
       </div>
     </>
   );
