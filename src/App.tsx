@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import Badge from './components/urbint/badge/Badge';
-import { LevelEnum } from './components/urbint/badge/Badge';
+import { LevelEnum } from './components/urbint/utils/LevelEnum';
 import Navigation from './components/urbint/navigation/Navigation';
 import Item from './components/urbint/item/Item';
 

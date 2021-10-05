@@ -1,7 +1,7 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import Item from './Item';
-import { LevelEnum } from '../badge/Badge';
+import { LevelEnum } from '../utils/LevelEnum';
 
 export default {
     title: 'Urbint/Item',

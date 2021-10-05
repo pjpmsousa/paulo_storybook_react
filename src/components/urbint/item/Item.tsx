@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./Item.module.css";
 import Badge from "../badge/Badge";
-import { LevelEnum } from "../badge/Badge";
+import { LevelEnum } from "../utils/LevelEnum";
 
 interface ItemProps {
     risk: LevelEnum;

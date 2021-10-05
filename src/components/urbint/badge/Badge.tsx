@@ -1,13 +1,6 @@
 import React from "react";
 import styles from "./Badge.module.css";
-
-export enum LevelEnum {
-    unknown = "unknown",
-    low = "low",
-    medium = "medium",
-    high = "high",
-    veryHigh = "very-high"
-}
+import {LevelEnum} from "../utils/LevelEnum";
 
 interface BadgeProps {
   riskLevel: LevelEnum;
