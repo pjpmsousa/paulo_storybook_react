@@ -4,9 +4,9 @@ import styles from "./ItemList.module.css";
 import { ItemProps } from "../item/Item";
 import AddItem from "../addItem/AddItem";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const ItemList = () => {
-
   //mocked data for testing purposes
   const dummyItems: ItemProps[] = [
     {
@@ -62,7 +62,15 @@ const ItemList = () => {
       <AddItem addForm={onAddItem}></AddItem>
       <div className={styles.wrapper}>
         {list.map((item) => {
-          return <Item key={item.itemId} {...item}></Item>;
+          return (
+            <Link
+              key={item.itemId}
+              className={styles.link}
+              to={{ pathname: `/details/${item.itemId}`, state: item }}
+            >
+              <Item key={item.itemId} {...item}></Item>
+            </Link>
+          );
         })}
       </div>
     </>
