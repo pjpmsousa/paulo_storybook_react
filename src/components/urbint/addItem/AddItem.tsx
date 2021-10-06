@@ -14,7 +14,7 @@ const AddItem = ({ addForm }: AddItemProps) => {
   const [town, setTown] = useState("");
   const [task, setTask] = useState("");
   const [startDate, setStartDate] = useState("");
-  const [riskLevel, setRiskLevel] = useState <LevelEnum> (LevelEnum.unknown);
+  const [riskLevel, setRiskLevel] = useState<LevelEnum>(LevelEnum.unknown);
   const [formInvalid, setFormInvalid] = useState(false);
 
   const handleTypeChange = (event: any) => {
@@ -53,7 +53,10 @@ const AddItem = ({ addForm }: AddItemProps) => {
     event.preventDefault();
 
     const newItem: ItemProps = {
-      itemId: Math.random().toFixed(6),
+      // generate random id
+      itemId: `#${Math.floor(Math.random() * 0x1000000)
+        .toString(16)
+        .substring(1)}`,
       street: street,
       type: type,
       task: task,
@@ -63,9 +66,15 @@ const AddItem = ({ addForm }: AddItemProps) => {
     };
 
     // adding some basic validation (forms with empty inputs don't get submitted)
-    if(!town.length || !task.length || !street.length || !startDate.length || !type.length) {
-        setFormInvalid(true);
-        return;
+    if (
+      !town.length ||
+      !task.length ||
+      !street.length ||
+      !startDate.length ||
+      !type.length
+    ) {
+      setFormInvalid(true);
+      return;
     }
 
     addForm(newItem);
@@ -81,7 +90,9 @@ const AddItem = ({ addForm }: AddItemProps) => {
             Task
           </label>
           <input
-            className={!task.length && formInvalid ? styles.empty : styles.input}
+            className={
+              !task.length && formInvalid ? styles.empty : styles.input
+            }
             id="task"
             type="text"
             value={task}
@@ -94,7 +105,9 @@ const AddItem = ({ addForm }: AddItemProps) => {
             Type
           </label>
           <input
-            className={!type.length && formInvalid ? styles.empty : styles.input}
+            className={
+              !type.length && formInvalid ? styles.empty : styles.input
+            }
             id="type"
             type="text"
             value={type}
@@ -107,7 +120,9 @@ const AddItem = ({ addForm }: AddItemProps) => {
             Street
           </label>
           <input
-            className={!street.length && formInvalid ? styles.empty : styles.input}
+            className={
+              !street.length && formInvalid ? styles.empty : styles.input
+            }
             id="street"
             type="text"
             value={street}
@@ -120,7 +135,9 @@ const AddItem = ({ addForm }: AddItemProps) => {
             Town
           </label>
           <input
-            className={!town.length && formInvalid ? styles.empty : styles.input}
+            className={
+              !town.length && formInvalid ? styles.empty : styles.input
+            }
             id="town"
             type="text"
             value={town}
@@ -133,7 +150,9 @@ const AddItem = ({ addForm }: AddItemProps) => {
             Start Date
           </label>
           <input
-            className={!startDate.length && formInvalid ? styles.empty : styles.input}
+            className={
+              !startDate.length && formInvalid ? styles.empty : styles.input
+            }
             id="date"
             type="date"
             value={startDate}
