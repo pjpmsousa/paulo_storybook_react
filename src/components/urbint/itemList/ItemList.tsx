@@ -1,3 +1,4 @@
+import React from "react";
 import { LevelEnum } from "../utils/LevelEnum";
 import Item from "../item/Item";
 import styles from "./ItemList.module.css";
@@ -7,6 +8,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 
 const ItemList = () => {
+  
   //mocked data for testing purposes
   const dummyItems: ItemProps[] = [
     {
@@ -38,7 +40,7 @@ const ItemList = () => {
     },
   ];
 
-  const [list, setList] = useState(dummyItems);
+  const [list, setList] = useState<ItemProps[]>(dummyItems);
 
   const onAddItem = (newItem: ItemProps): void => {
     setList((previousList) => {

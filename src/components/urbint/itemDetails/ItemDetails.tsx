@@ -4,11 +4,12 @@ import styles from "./ItemDetails.module.css";
 import { useLocation } from "react-router-dom";
 import Badge from "../badge/Badge";
 import { ItemProps } from "../item/Item";
+import { Location } from "history";
 
 const ItemDetails = () => {
 
-  // Stretch Goal: basic component that serves only the purpose of displaying item detail and routes working
-  const info: any = useLocation();
+  // Stretch Goal: basic component that serves only the purpose of displaying item details and working router
+  const info: any = useLocation<Location>();
   const item: ItemProps = {
     risk: info.state.risk,
     itemId: info.state.itemId,

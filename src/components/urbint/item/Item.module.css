@@ -26,6 +26,7 @@
 .type {
     font-size: 14px;
     color: darkslategray;
+    text-align: end;
 }
 
 .location {
@@ -50,4 +51,5 @@
 
 .town {
     font-size: 14px;
+    text-align: end;
 }

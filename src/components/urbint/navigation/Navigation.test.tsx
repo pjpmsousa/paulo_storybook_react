@@ -4,7 +4,7 @@ import Navigation from "./Navigation";
 describe("Navigation", () => {
     test('Check if project title is displayed', () => {
         render(<Navigation isIconVisible={false}/>);
-        const text = screen.getByText('DAMAGE', {exact: false});
+        const text = screen.getByText('DAMAGE PREVENTION', {exact: false});
         expect(text).toBeInTheDocument();
     });
 

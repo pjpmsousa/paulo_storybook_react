@@ -17,27 +17,27 @@ const AddItem = ({ addForm }: AddItemProps) => {
   const [riskLevel, setRiskLevel] = useState<LevelEnum>(LevelEnum.unknown);
   const [formInvalid, setFormInvalid] = useState(false);
 
-  const handleTypeChange = (event: any) => {
+  const handleTypeChange = (event: React.ChangeEvent<HTMLInputElement>):void => {
     setType(event.target.value);
   };
 
-  const handleStreetChange = (event: any) => {
+  const handleStreetChange = (event: React.ChangeEvent<HTMLInputElement>):void => {
     setStreet(event.target.value);
   };
 
-  const handleTownChange = (event: any) => {
+  const handleTownChange = (event: React.ChangeEvent<HTMLInputElement>):void => {
     setTown(event.target.value);
   };
 
-  const handleTaskChange = (event: any) => {
+  const handleTaskChange = (event: React.ChangeEvent<HTMLInputElement>):void => {
     setTask(event.target.value);
   };
 
-  const handleStartDateChange = (event: any) => {
+  const handleStartDateChange = (event: React.ChangeEvent<HTMLInputElement>):void => {
     setStartDate(event.target.value);
   };
 
-  const handleRiskLevelChange = (event: any) => {
+  const handleRiskLevelChange = (event: any):void => {
     setRiskLevel(event.target.value);
   };
 
@@ -49,7 +49,7 @@ const AddItem = ({ addForm }: AddItemProps) => {
     setStartDate("");
   };
 
-  const addItem = (event: any) => {
+  const addItem = (event: any): void => {
     event.preventDefault();
 
     const newItem: ItemProps = {
@@ -76,7 +76,6 @@ const AddItem = ({ addForm }: AddItemProps) => {
       setFormInvalid(true);
       return;
     }
-
     addForm(newItem);
     setFormInvalid(false);
     clearForm();
