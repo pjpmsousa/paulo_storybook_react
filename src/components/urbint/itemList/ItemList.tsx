@@ -2,8 +2,12 @@ import { LevelEnum } from "../utils/LevelEnum";
 import Item from "../item/Item";
 import styles from "./ItemList.module.css";
 import { ItemProps } from "../item/Item";
+import AddItem from "../addItem/AddItem";
+import { useState } from "react";
 
 const ItemList = () => {
+
+  //mocked data for testing purposes
   const dummyItems: ItemProps[] = [
     {
       risk: LevelEnum.medium,
@@ -33,12 +37,35 @@ const ItemList = () => {
       task: "Planting Tree by Nyc Parks",
     },
   ];
+
+  const [list, setList] = useState(dummyItems);
+
+  const onAddItem = (newItem: ItemProps): void => {
+    setList((previousList) => {
+      return [
+        ...previousList,
+        {
+          risk: newItem.risk,
+          itemId: newItem.itemId,
+          type: newItem.type,
+          street: newItem.street,
+          town: newItem.town,
+          startDate: newItem.startDate,
+          task: newItem.task,
+        },
+      ];
+    });
+  };
+
   return (
-    <div className={styles.wrapper}>
-      {dummyItems.map((item) => {
-        return <Item key={item.itemId} {...item}></Item>;
-      })}
-    </div>
+    <>
+      <AddItem addForm={onAddItem}></AddItem>
+      <div className={styles.wrapper}>
+        {list.map((item) => {
+          return <Item key={item.itemId} {...item}></Item>;
+        })}
+      </div>
+    </>
   );
 };
 
