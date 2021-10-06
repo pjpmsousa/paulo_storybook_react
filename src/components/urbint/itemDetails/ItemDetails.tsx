@@ -6,6 +6,8 @@ import Badge from "../badge/Badge";
 import { ItemProps } from "../item/Item";
 
 const ItemDetails = () => {
+
+  // Stretch Goal: basic component that serves only the purpose of displaying item detail and routes working
   const info: any = useLocation();
   const item: ItemProps = {
     risk: info.state.risk,
@@ -14,18 +16,30 @@ const ItemDetails = () => {
     street: info.state.street,
     town: info.state.town,
     startDate: info.state.startDate,
-    task: info.state.task
+    task: info.state.task,
   };
 
   return (
     <>
       <div className={styles.container}>
-        <div><b>Id:</b> {item.itemId}</div>
-        <div><b>Task:</b> {item.task}</div>
-        <div><b>Type:</b> {item.type}</div>
-        <div><b>Street:</b> {item.street}</div>
-        <div><b>Town:</b> {item.town}</div>
-        <div><b>Start date:</b> {new Date(item.startDate).toLocaleString()}</div>
+        <div>
+          <b>Id:</b> {item.itemId}
+        </div>
+        <div>
+          <b>Task:</b> {item.task}
+        </div>
+        <div>
+          <b>Type:</b> {item.type}
+        </div>
+        <div>
+          <b>Street:</b> {item.street}
+        </div>
+        <div>
+          <b>Town:</b> {item.town}
+        </div>
+        <div>
+          <b>Start date:</b> {new Date(item.startDate).toLocaleString()}
+        </div>
         <Badge isBadge riskLevel={item.risk} />
       </div>
 

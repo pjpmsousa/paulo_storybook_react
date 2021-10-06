@@ -95,6 +95,8 @@ const AddItem = ({ addForm }: AddItemProps) => {
             }
             id="task"
             type="text"
+            maxLength={100}
+            placeholder="Enter task"
             value={task}
             onChange={handleTaskChange}
           />
@@ -110,6 +112,8 @@ const AddItem = ({ addForm }: AddItemProps) => {
             }
             id="type"
             type="text"
+            maxLength={20}
+            placeholder="Enter type"
             value={type}
             onChange={handleTypeChange}
           />
@@ -125,6 +129,8 @@ const AddItem = ({ addForm }: AddItemProps) => {
             }
             id="street"
             type="text"
+            maxLength={45}
+            placeholder="Enter street"
             value={street}
             onChange={handleStreetChange}
           />
@@ -140,6 +146,8 @@ const AddItem = ({ addForm }: AddItemProps) => {
             }
             id="town"
             type="text"
+            maxLength={20}
+            placeholder="Enter town"
             value={town}
             onChange={handleTownChange}
           />

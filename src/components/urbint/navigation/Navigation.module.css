@@ -24,3 +24,9 @@
     width: 15px;
 }
 
+@media only screen and (max-width: 300px) {
+    .icon {
+        display: none;
+    }
+  }
+

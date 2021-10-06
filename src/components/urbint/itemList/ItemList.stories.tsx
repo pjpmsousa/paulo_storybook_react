@@ -10,4 +10,5 @@ export default {
 
 const Template: ComponentStory <typeof ItemList> = args => <MemoryRouter><ItemList /></MemoryRouter>;
 
+// This story includes not only the item list, but also the AddItem form
 export const Standard = Template.bind({});
