@@ -1,5 +1,4 @@
 import React from "react";
-import styles from "./Item.module.css";
 import Badge from "../badge/Badge";
 import { LevelEnum } from "../utils/LevelEnum";
 
@@ -32,23 +31,23 @@ const Item = ({
 
   return (
     <>
-      <div className={styles.container}>
-        <div className={styles.header}>
-          <div className={styles.risk} data-testid="risk-label">
+      <div className="border-1 p-2 border-gray-300 font-sans max-w-xs font-medium text-gray-500 break-words">
+        <div className="flex justify-between text-sm">
+          <div className="flex" data-testid="risk-label">
             <Badge riskLevel={risk} isBadge={false} />
-            <div className={styles.separator}>|</div>
+            <div className="text-gray-300 px-1">|</div>
             <div data-testid="item-id">{itemId}</div>
           </div>
-          <div className={styles.type} data-testid="item-type">{type}</div>
+          <div className="text-sm text-right text-gray-700" data-testid="item-type">{type}</div>
         </div>
-        <div className={styles.location}>
-          <span className={styles.street} data-testid="address-street">{street}</span>
-          <span className={styles.town} data-testid="address-town">{town}</span>
+        <div className="flex justify-between py-1">
+          <span className="text-base font-bold text-black text-left" data-testid="address-street">{street}</span>
+          <span className="text-sm text-right flex items-center" data-testid="address-town">{town}</span>
         </div>
-        <div className={styles.description} data-testid="start-date">{`Starts in ${calculateDays(
+        <div className="text-sm flex text-left" data-testid="start-date">{`Starts in ${calculateDays(
           startDate
         )} days`}</div>
-        <div className={styles.description} data-testid="task-description">{task}</div>
+        <div className="text-sm flex text-left" data-testid="task-description">{task}</div>
       </div>
     </>
   );

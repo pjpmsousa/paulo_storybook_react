@@ -83,9 +83,9 @@ const AddItem = ({ addForm }: AddItemProps) => {
 
   return (
     <>
-      <form className={styles.form} onSubmit={addItem}>
+      <form className="text-left p-4 grid gap-4 font-sans font-semibold" onSubmit={addItem}>
         <div>
-          <label className={styles.label} htmlFor="task">
+          <label className="pr-4" htmlFor="task">
             Task
           </label>
           <input
@@ -102,7 +102,7 @@ const AddItem = ({ addForm }: AddItemProps) => {
         </div>
 
         <div>
-          <label className={styles.label} htmlFor="type">
+          <label className="pr-4" htmlFor="type">
             Type
           </label>
           <input
@@ -119,7 +119,7 @@ const AddItem = ({ addForm }: AddItemProps) => {
         </div>
 
         <div>
-          <label className={styles.label} htmlFor="street">
+          <label className="pr-4" htmlFor="street">
             Street
           </label>
           <input
@@ -136,7 +136,7 @@ const AddItem = ({ addForm }: AddItemProps) => {
         </div>
 
         <div>
-          <label className={styles.label} htmlFor="town">
+          <label className="pr-4" htmlFor="town">
             Town
           </label>
           <input
@@ -153,7 +153,7 @@ const AddItem = ({ addForm }: AddItemProps) => {
         </div>
 
         <div>
-          <label className={styles.label} htmlFor="date">
+          <label className="pr-4" htmlFor="date">
             Start Date
           </label>
           <input
@@ -168,10 +168,10 @@ const AddItem = ({ addForm }: AddItemProps) => {
         </div>
 
         <div>
-          <label className={styles.label} htmlFor="risk">
+          <label className="pr-4" htmlFor="risk">
             Risk Level
           </label>
-          <select id="risk" onChange={handleRiskLevelChange} value={riskLevel}>
+          <select className="border-1 border-gray-500 rounded h-6" id="risk" onChange={handleRiskLevelChange} value={riskLevel}>
             <option value={LevelEnum.unknown}>Unknown</option>
             <option value={LevelEnum.low}>Low</option>
             <option value={LevelEnum.medium}>Medium</option>
@@ -181,7 +181,7 @@ const AddItem = ({ addForm }: AddItemProps) => {
         </div>
 
         <div>
-          <button className={styles.button} type="submit">
+          <button className="font-semibold border-1 border-gray-400 rounded py-1 px-3 hover:opacity-70" type="submit">
             Add Item
           </button>
         </div>
