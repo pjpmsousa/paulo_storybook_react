@@ -1,7 +1,6 @@
 import React from "react";
 import { LevelEnum } from "../utils/LevelEnum";
 import Item from "../item/Item";
-import styles from "./ItemList.module.css";
 import { ItemProps } from "../item/Item";
 import AddItem from "../addItem/AddItem";
 import { useState } from "react";
@@ -62,12 +61,12 @@ const ItemList = () => {
   return (
     <>
       <AddItem addForm={onAddItem}></AddItem>
-      <div className={styles.wrapper}>
+      <div className="grid gap-4 grid-cols-items">
         {list.map((item) => {
           return (
             <Link
               key={item.itemId}
-              className={styles.link}
+              className="no-underline"
               to={{ pathname: `/details/${item.itemId}`, state: item }}
             >
               <Item key={item.itemId} {...item}></Item>

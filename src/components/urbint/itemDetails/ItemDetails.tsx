@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import styles from "./ItemDetails.module.css";
 import { useLocation } from "react-router-dom";
 import Badge from "../badge/Badge";
 import { ItemProps } from "../item/Item";
@@ -22,7 +21,7 @@ const ItemDetails = () => {
 
   return (
     <>
-      <div className={styles.container}>
+      <div className="grid text-left gap-2 p-4">
         <div>
           <b>Id:</b> {item.itemId}
         </div>
@@ -44,7 +43,7 @@ const ItemDetails = () => {
         <Badge isBadge riskLevel={item.risk} />
       </div>
 
-      <Link className={styles.link} to="/">
+      <Link className="no-underline py-1 px-4 border-1 border-gray-400 rounded hover:opacity-70" to="/">
         Go Back
       </Link>
     </>
